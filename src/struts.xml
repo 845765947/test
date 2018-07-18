@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 设置用户界面主题 -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 设置常量的方式解决中文乱码 -->
+	<constant name="struts.il8n.encoding" value="UTF-8" />
+	<!-- 创建一个defalut包，基础struts 2的struts-default包 -->
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="login" class="com.oyxy.action.LoginAction"
+			method="login">
+			<result name="loginShow">/page/show.jsp</result>
+			<result name="error">/page/Login.jsp</result>
+		</action>
+	</package>
+</struts>		
